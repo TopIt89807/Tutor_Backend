@@ -9,6 +9,7 @@ const subjectSchema = mongoose.Schema({
     number: Number,
     name: String,
     price: Number,
+    iap_id: String,
     chapters: [{
         number: Number,
         name: String,

@@ -24,6 +24,7 @@ module.exports.addSubject = (data) =>
             number: data.number,
             name: data.name,
             price: data.price,
+            iap_id: data.iap_id,
             chapters: []
         });
 
@@ -73,6 +74,7 @@ module.exports.updateSubject = (data) =>
                 subject.number = data.number;
                 subject.name = data.name;
                 subject.price = data.price;
+                subject.iap_id = data.iap_id;
                 return subject.save();
             })
 

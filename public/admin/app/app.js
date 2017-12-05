@@ -731,6 +731,7 @@ app.controller("subjectsController", function ($scope, $http, dataService) {
 			var info = $scope.subjects[$scope.selectedIndex];
 			$scope.input.number = info.number;
 			$scope.input.name = info.name;
+			$scope.input.iap_id = info.iap_id;
 			$scope.input.price = info.price;
 		}
 
@@ -819,6 +820,7 @@ app.controller("subjectsController", function ($scope, $http, dataService) {
 				number: $scope.input.number,
         name: $scope.input.name,
 				price: $scope.input.price,
+				iap_id: $scope.input.iap_id
   		};
 
 			$http.post("/api/courses/subjects/update", {data : data}, dataService.authHeader)
@@ -827,6 +829,7 @@ app.controller("subjectsController", function ($scope, $http, dataService) {
 					$scope.subjects[$scope.selectedIndex].number = $scope.input.number;
 					$scope.subjects[$scope.selectedIndex].name = $scope.input.name;
 					$scope.subjects[$scope.selectedIndex].price = $scope.input.price;
+					$scope.subjects[$scope.selectedIndex].iap_id = $scope.input.iap_id;
 
 					alert(res.message);
 				}, function myError(response) {
@@ -842,6 +845,7 @@ app.controller("subjectsController", function ($scope, $http, dataService) {
 				number: $scope.input.number,
         name: $scope.input.name,
 				price: $scope.input.price,
+				iap_id: $scope.input.iap_id
   		};
 
       $http.post("/api/courses/subjects/add", {data: data}, dataService.authHeader)

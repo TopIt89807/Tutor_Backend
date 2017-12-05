@@ -52,6 +52,7 @@
               <th>Number</th>
               <th>Subject Name</th>
               <th>Price</th>
+              <th>In App Purchase ID</th>
               <th> </th>
             </tr>
             </thead>
@@ -60,6 +61,7 @@
               <td>{{subject.number}}</td>
               <td>{{subject.name}}</td>
               <td>{{subject.price}}</td>
+              <td>{{subject.iap_id}}</td>
               <td>
                 <a class="btn" data-toggle="modal" data-target="#addDialog" ng-click="onUpdate(subject._id)"> <i class="fa fa-edit text-blue"></i></a>
                 <a class="btn" data-toggle="modal" data-target="#myModal" ng-click="onSelect(subject._id)"> <i class="fa fa-remove text-red"></i></a>
@@ -71,6 +73,7 @@
               <th>Number</th>
               <th>Subject Name</th>
               <th>Price</th>
+              <th>In App Purchase ID</th>
               <th> </th>
             </tr>
             </tfoot>
@@ -127,6 +130,10 @@
           <div class="form-group">
             <label for="price">Price</label>
             <input type="currency" class="form-control" id="price" placeholder="Price" ng-model="input.price">
+          </div>
+          <div class="form-group">
+            <label for="iap_id">Price</label>
+            <input type="text" class="form-control" id="iap_id" placeholder="In-App purchase ID" ng-model="input.iap_id">
           </div>
         </div>
         <!-- /.box-body -->
